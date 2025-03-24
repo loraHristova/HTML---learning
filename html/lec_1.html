@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"> <!-- izpolzva atributyt lang, za da posochi ezikyt na web stranicata, mojem i da specify-nem dyrjavata: lang="en-US" -->
 <head>
 <title>My first page</title>
 </head>
@@ -7,9 +7,16 @@
 
 <h1>My First Heading - most important one</h1>
 <h6>My second Heading - least important one</h6>
-<p>My first paragraph. <br> <!-- prazen element, nqma content i nqma endtag, prekysva reda --> With a line break! </p>
+<p style="color:red">My first paragraph. Now it is red <br> <!-- prazen element, nqma content i nqma endtag, prekysva reda --> With a line break! </p> <!-- 
+atributyt style dobavq stilove kym elementa (cvqt, font, razmer, ...)-->
+<p title="When you hover over me this text will show">Another paragraph</p> <!-- this attribute is used to display extra info about the element-->
 
-<a href="https://www.w3schools.com">This is a link, the destination is saved in an attribute</a>
-<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"> <!-- src - source file, alt - alternative text-->
+<a href="https://www.w3schools.com">This is a link, the destination is saved in an attribute</a> <!-- href is an attribute, attributes are defined in the starting tag,
+usually come in a pair of type name="value"-->
+<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"> <!-- src - source file, alt - alternative text, displayed when fetching the image is impossible-->
+<!-- the src attribute is used to specify the path to the image to be displayed
+ two ways to display the path:
+ absolute url - hosted on a website in internet
+ relative url - hosted within the website -->
 </body>
 </html>
