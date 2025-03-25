@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: powderblue;
+}
+h1   {
+    color: blue;
+    font-family: verdana;
+    font-size: 30px; 
+}
+p    {
+    color: red;
+    font-family: Arial;
+    font-size: 80px;
+    border: 2px solid orange; /*border around the element, [width] [style] [color]*/
+    padding: 30px; /*the space between the border and the text*/
+    margin: 50px; /*defines the space outside the border*/
+    }
+</style> <!-- internal css, text color to all h1 tags will be blue and to all paragraphs will be red, the background color of
+the page will be powderblue -->
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+<h1> Another h1 to try if its text color is blue </h1>
+
+</body>
+</html>
+
+<!-- if we want to modify the html page with css we can write our css in a different file and link it to our html, like so:
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css"> //here the rel attribute specifies the connection between the html and the 
+  //external file we are linking, in this case it specifies that we are connecting a css file
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+where the styles.css looks like this:
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+-->
