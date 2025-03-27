@@ -133,4 +133,91 @@ topmost frame where every subframe will be closed-->
   <h2 id="C4">Chapter 4</h2> <!-- Adding id so the connection is made correctly-->
   <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus veniam deserunt aliquam ratione possimus? Culpa inventore iusto ex, corporis delectus ducimus earum sunt placeat ut asperiores dolores deserunt. Laboriosam, alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolor suscipit culpa sequi, corrupti, earum perferendis aut ducimus, consequuntur amet dicta esse obcaecati quo labore nam ipsam? Voluptate, nobis obcaecati! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, saepe facere autem magni sed cupiditate nam neque numquam quos incidunt architecto in! Ratione tempore doloribus iure neque culpa perspiciatis dolorum? </p>
 
+  <h1> Images </h1>
+  <img src="_.jpeg" alt="Picture of beautiful nails." style="width: 128; height: 128;">
+  <img src="images/_.jpeg" alt="Picture of another beautiful nails." style="width: 128; height: 128;"> <!-- like this
+  we display an image in a subdirectory-->
+  <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Picture from W3Schools!"> <!-- with full url
+  we specify an url on a different server!-->
+
+  <img src="nyan-cat.avif" alt="An animated image of a cat."> <!-- like this we display anumated images-->
+  <p><img src="nyan-cat.avif" alt="An animated image of a cat." style="float:right;width:42px;height:42px;">
+    The image will float to the right of the text.</p>
+
+  <h1> Image maps </h1>
+  <img src="workplace.jpg" alt="Workplace" usemap="#workmap"> <!-- we insert the image as usual with the only difference
+  that we add an attribute usemap to connect the image and the map -->
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm"> <!-- with this element we define the clickable
+  area and position it on the original image with the coords attribute, the shape of the clickable area can be:
+  rect - defines a rectangular region
+  circle - defines a circular region
+  poly - defines a polygonal region
+  default - defines the entire region
+  these coordinates: coords="34,44,270,350" define the left top point of the rect: 34 pixels from the left margin and
+  44 pixels from the top margin, then the right bottom point of the rect is 270 pixels from the left margin and 350 pixels from
+  the top margin,
+  the href attribute is used to redirect when we click on the clickable area
+-->
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm"> <!-- the coordinates of the circle shape are 
+  the coordinates of the center and the radius-->
+</map>
+
+<!--If we want to create any shape we can use poly, the coordinates for the poly are just listing all the points needed-->
+
+<!--if we want to trigger some JavaScript code we can do like so: -->
+<map name="workmap">
+  <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+</map>
+
+<script>
+function myFunction() {
+  alert("You clicked the coffee cup!");
+}
+</script>
+
+<h1> Background image </h1>
+
+<p style="background-image: url('_.jpeg');"></p> <!-- we added background image to an html element -->
+
+<!-- can also do it in a style element, like so:
+ <style>
+p {
+  background-image: url('img_girl.jpg');
+}
+</style>
+-->
+
+<!-- if we want a background image on the whole page we can do it in a style element, for the body element-->
+<style>
+  body {
+    background-image: url('_.jpeg');
+    /* now the image repeats itself to fill the whole bacground if we do not want that to happen we can do this: */
+    background-repeat: no-repeat;
+    /* but if the image is smaller than the background it will not fill it, to fix that we can use: */
+    /*background-attachment: fixed; /*this insures that the image is not stretched, it keeps its original proportions*/
+    background-size: cover; /*this makes the image fill the whole background, if we want the image to stretch, we can write:
+    background-size: 100% 100%;*/
+  }
+  </style>
+
+  <h1 title="this element allows you to display pictures for different devices on screen sizes">The picture element</h1>
+  <picture>
+    <source media="(min-width: 650px)" srcset="jpgImage.jpg"> <!-- the different source elements give the browser the choice
+    to choose the best fitting image for the screen size-->
+    <source media="(min-width: 465px)" srcset="pngImage.png">
+    <img src="_.jpg"> <!-- this is used by browsers that do not support the picture element or if none of the 
+    source element match-->
+  </picture>
+
+  <!-- sometimes browsers do not support all image formats, to guarantee a displayed picture, we can use the picture element,
+   the browser will choose the first format it recognises and will ignore any following -->
+  <picture>
+    <source srcset="pngImage.png">
+    <source srcset="jpgImage.jpg">
+    <img src="nyan-cat.avif" alt="Cat" style="width:auto;">
+  </picture>
+
   
