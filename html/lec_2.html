@@ -13,7 +13,7 @@ h1   {
 p    {
     color: red;
     font-family: Arial;
-    font-size: 80px;
+    font-size: 20px;
     border: 2px solid orange; /*border around the element, [width] [style] [color]*/
     padding: 30px; /*the space between the border and the text*/
     margin: 50px; /*defines the space outside the border*/
@@ -56,3 +56,81 @@ p {
   color: red;
 }
 -->
+
+<h1> Links </h1>
+
+<a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a> <!-- target tells the browser where to open the link
+by default it opens it in the current window, the values that target can hold are:
+_self (the same page), 
+_blank (opens in a new window, tab), 
+_parent (opens the document in the parent frame), 
+_top (in the full body of the window) -->
+
+<a href="https://www.w3schools.com/" target="_parent">Visit W3Schools!</a> <!-- here the link will be opened in the parent
+frame, good to use when we want to navigate back to the parent-->
+<a href="https://www.w3schools.com/" target="_top">Visit W3Schools!</a> <!-- in this case the link will be opened in the
+topmost frame where every subframe will be closed-->
+
+<a href="default.asp">
+    <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a> <!-- we can use an image as a link, just putting the <img> tag inside the <a> tag -->
+
+ <a href="mailto:someone@example.com">Send email</a> <!-- with mailto: we achieve the process of openening the user's
+ email program and like this it is able to send an email to the given email address-->
+
+ <button onclick="document.location='default.asp'">HTML Tutorial</button> <!-- using button as a link--> 
+
+ <h2>Link colors</h2>
+
+ <style>
+  a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none; /*when unvisited will look like this, green not underlined*/
+  }
+  
+  a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  </style>
+
+<style>
+  a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /* thanks to this line the block looks like an actual button, because it is clickable
+    as a whole, and only the text inside */
+  }
+  
+  a:hover, a:active {
+    background-color: red;
+  }
+  </style> <!-- it can be styled as a button also-->
+
+  <h2> Creating bookmarks </h2>
+ 
+
+  <a href="#C4">Jump to chapter 4</a> <!-- The browser will scroll on its own -->
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio culpa, possimus repudiandae dolore impedit voluptatibus aspernatur. Totam sunt, praesentium repellendus, iure veniam aliquam est doloribus similique ab quia, excepturi consequatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, sit modi. Illum magnam iusto saepe voluptatum, blanditiis ullam distinctio reiciendis officiis, necessitatibus architecto inventore, rem at quia tempore quo rerum! </p>
+  <h2 id="C4">Chapter 4</h2> <!-- Adding id so the connection is made correctly-->
+  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus veniam deserunt aliquam ratione possimus? Culpa inventore iusto ex, corporis delectus ducimus earum sunt placeat ut asperiores dolores deserunt. Laboriosam, alias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dolor suscipit culpa sequi, corrupti, earum perferendis aut ducimus, consequuntur amet dicta esse obcaecati quo labore nam ipsam? Voluptate, nobis obcaecati! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, saepe facere autem magni sed cupiditate nam neque numquam quos incidunt architecto in! Ratione tempore doloribus iure neque culpa perspiciatis dolorum? </p>
+
+  
